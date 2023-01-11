@@ -10,11 +10,14 @@ import team.tgys.prac.service.PracService;
 import java.util.ArrayList;
 import java.util.List;
 
-@RequiredArgsConstructor
 @RestController
 public class PracController {
 
     private final PracService pracService;
+
+    public PracController(PracService pracService) {
+        this.pracService = pracService;
+    }
 
     @PostMapping("/test")
     public List<Prac> pracList(){
