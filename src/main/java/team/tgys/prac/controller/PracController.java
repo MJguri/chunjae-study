@@ -20,6 +20,11 @@ public class PracController {
     public List<Prac> pracList(){
 
         return  pracService.findAll();
+    }
 
+    @GetMapping("/test")
+    public List<Prac> findPrac(){
+
+        return  pracService.findAll();
     }
 }
